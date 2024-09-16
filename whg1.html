@@ -1,20 +1,18 @@
-<!DOCTYPE html>
 <html>
     <head>
-        <title>sparksite</title>
         <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
     </head>
 
-    <body cz-shortcut-listen="true">
+    <body  style="background-color: black;" cz-shortcut-listen="true">  
     <center>
-        <embed width=100% src="/whg/whg1SPEEDRUN.swf" pluginspage="http://www.macromedia.com/go/getflashplayer"></ruffle-embed>
+            <embed height="720" width="1080" src="/whg/whg1SPEEDRUN.swf" pluginspage="http://www.macromedia.com/go/getflashplayer"></ruffle-embed>
     </center>
-    <script>
+   <script>
         document.addEventListener("keydown", function (e) {
             if (e.ctrlKey && e.altKey && e.key === z) {
                 window.location.href = "https://bsed8.github.io/whg";
             }
-        });
+        }
     </script>
     </body>
 </html>  
