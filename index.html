@@ -1,20 +1,48 @@
 <!DOCTYPE html>
 <head>
-    <title>spark site</title>
+    <title>sparksite</title>
+    <style>
+        body {
+            background-color: #212121;
+            font-family: arial;
+            font-weight: bold;
+        }
+        button {
+            font-weight: bold;
+            font-family: arial;
+            border: none;
+            border-radius:20px;
+            padding-left: 50px;
+            padding-right: 50px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <html>
-    <body style="background-color: black;" cz-shortcut-listen="true"><header>
+    <bodycz-shortcut-listen="true"><header>
         <center>
-            <a href="/whg/whg1">whg1</a>
-            <br>
-            <a href="/whg/whg2">whg2</a>
-            <br>
-            <a href="/whg/whg3">whg3</a>
-            <br>
-            <a href="/whg/whg4">whg4</a>
-            <br>
-            <a href="/whg/whg4noenemies">whg4 no enemies</a>
+            <button onclick="openGame('whg1')">
+                whg1
+            </button>
+            <button onclick="openGame('whg2')">
+                whg2
+            </button>  
+            <button onclick="openGame('whg3')">
+                whg3
+            </button>
+            <button onclick="openGame('whg4')">
+                whg4
+            </button>
+            <button onclick="openGame('whg4NOENEMIES')">
+                whg4 no enemies
+            </button>
         </center>
-    </header>
+    <script>
+        function openGame(game) {
+            window.location.href = `https://bsed8.github.io/whg/${game}.html`
+        }
+    </script>
     </body>
 </html>
