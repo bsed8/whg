@@ -3,20 +3,19 @@
     <head>
         <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
         <style>
-            embed {
-                left: 0px;
-            }
             body {
                 background-color: black;
+                margin: 0;
+                padding: 0;
             }
         </style>
     </head>
 
     <body cz-shortcut-listen="true">
-        <embed id="game" height="768" width="1366" src="/whg/swf/whg1SPEEDRUN.swf" pluginspage="http://www.macromedia.com/go/getflashplayer"></ruffle-embed>
+        <embed id="game" src="/whg/swf/whg1SPEEDRUN.swf" pluginspage="http://www.macromedia.com/go/getflashplayer"></ruffle-embed>
         <script>
-            document.getElementById("game").style.height = Screen.height;
-            document.getElementById("game").style.width = Screen.width;
+            document.getElementById("game").style.height = screen.height;
+            document.getElementById("game").style.width = screen.width;
             document.addEventListener("keydown", function (e) {
                 if (e.ctrlKey && e.altKey && e.key === "z") {
                     window.location.href = "https://bsed8.github.io/whg";
