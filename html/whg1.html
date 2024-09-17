@@ -4,7 +4,6 @@
         <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
         <style>
             embed {
-                position: absolute;
                 left: 0px;
             }
             body {
@@ -14,14 +13,16 @@
     </head>
 
     <body cz-shortcut-listen="true">
-        <embed height="768" width="1366" src="/whg/swf/whg1SPEEDRUN.swf" pluginspage="http://www.macromedia.com/go/getflashplayer"></ruffle-embed>
+        <embed id="game" height="768" width="1366" src="/whg/swf/whg1SPEEDRUN.swf" pluginspage="http://www.macromedia.com/go/getflashplayer"></ruffle-embed>
         <script>
+            document.getElementById("game").style.height = Screen.height;
+            document.getElementById("game").style.width = Screen.width;
             document.addEventListener("keydown", function (e) {
                 if (e.ctrlKey && e.altKey && e.key === "z") {
                     window.location.href = "https://bsed8.github.io/whg";
                     console.log("trying")
                 }
-            });    
+            });
          </script>
     </body>
 </html>  
