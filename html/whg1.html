@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <head>
         <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
@@ -6,19 +7,21 @@
                 position: absolute;
                 left: 0px;
             }
+            body {
+                background-color: black;
+            }
         </style>
     </head>
 
-    <body  style="background-color: black;" cz-shortcut-listen="true">  
-    <center>
-            <embed height="768" width="1366" src="/whg/swf/whg1SPEEDRUN.swf" pluginspage="http://www.macromedia.com/go/getflashplayer"></ruffle-embed>
-    </center>
-    <script>
-        document.addEventListener("keydown", function (e) {
-            if (e.ctrlKey && e.altKey && e.key === "z") {
-                window.location.href = "https://bsed8.github.io/whg";
-            }
-        }
-     </script>
+    <body cz-shortcut-listen="true">
+        <embed height="768" width="1366" src="/whg/swf/whg1SPEEDRUN.swf" pluginspage="http://www.macromedia.com/go/getflashplayer"></ruffle-embed>
+        <script>
+            document.addEventListener("keydown", function (e) {
+                if (e.ctrlKey && e.altKey && e.key === "z") {
+                    window.location.href = "https://bsed8.github.io/whg";
+                    console.log("trying")
+                }
+            });    
+         </script>
     </body>
 </html>  
